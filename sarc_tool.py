@@ -92,6 +92,6 @@ if len(sys.argv) >= 3:
         if not compression is None:
             destData = libyaz0.compress(destData, level=1)
             if compression == 1:
-                destData[3] = 1
+                destData[3] = 0x31
         if not Utils.bytesToFile(destData, dest):
             print('Cannnot open ' + dest)
